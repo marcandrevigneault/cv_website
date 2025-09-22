@@ -61,6 +61,15 @@
       "technologies": ["ECAD", "Signal Processing", "Fiber Optics"],
       "year": 2018,
       "link": "https://gaulspace.web.app/home"
+    },
+    {
+      "id": "proj3",
+      "title": "Earth Daily Analytics - Observation Satellite Constellation",
+      "category": "System Engineering",
+      "description": "Employed by ABB as a Space and Defense R&D Systems Engineer. Core team member on the EDOSS project. Primarily worked on the conception, technical management and testing of high-resolution, highly-complex flight integrated systems for a Earth Observation Satellite Constellation.",
+      "technologies": ["Python", "Optics", "Algorithms", "System Engineering"],
+      "year": 2025,
+      "link": "https://earthdaily.com/blog/earthdaily-analytics-to-launch-its-first-satellite"
     }
   ]
 }
