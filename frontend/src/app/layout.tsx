@@ -17,6 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.ico" />
+      </head>
       <body className={inter.className}>
         <GalaxyBackground />
         <div className="relative z-10">

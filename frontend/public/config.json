@@ -22,8 +22,8 @@
   },
   "services": {
     "hourly": {
-      "title": "Hourly Rate",
-      "rate": "$150/hr",
+      "title": "Hourly Work",
+      "rate": "Contact for rate",
       "description": "Advanced technical expertise on cross-disciplinary projects",
       "features": ["Video calls", "Code review", "Problem solving", "Prototyping", "Technical documentation", "Research", "Cleanroom Manufacturing" ]
     },
