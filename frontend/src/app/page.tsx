@@ -138,7 +138,7 @@ export default function Home() {
           <h2 className="text-3xl font-semibold mb-8">Documents</h2>
           <div className="flex gap-4 flex-wrap">
             <a
-              href={config?.documents.cv_marcandrevigneault_2025 || '/documents/cv_marcandrevigneault_2025.pdf'}
+              href={config?.documents.cv || '/documents/cv_marcandrevigneault_2025.pdf'}
               className="px-6 py-3 bg-secondary rounded-lg hover:bg-primary transition"
             >
               Download CV
