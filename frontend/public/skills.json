@@ -10,14 +10,14 @@
         "Spectroscopy",
         "Statistical Physics",
         "Computational Physics",
-        "Particle Physics",
         "Electromagnetic Theory"
       ],
-      "description": "Deep expertise in theoretical and computational physics with focus on quantum systems and simulations.",
+      "description": "Knowledgeable in theoretical and computational physics with focus on simulations.",
       "projects": [
-        "Quantum state simulation framework",
-        "Statistical mechanics solver",
-        "Particle collision analyzer"
+        "Monte Carlo light transport simulator",
+        "Custom optical performance assessment algorithms",
+        "SERS substrate design and testing",
+        "Video-Rate 2 photon modular microscope design"
       ]
     },
     {
@@ -26,22 +26,23 @@
       "icon": "💻",
       "color": "#06b6d4",
       "skills": [
+        "AI Integration",
         "Python",
         "TypeScript",
-        "JavaScript",
         "React",
-        "Node.js",
         "C++",
         "MATLAB",
-        "Rust",
         "Docker",
-        "Git"
+        "Git",
+        "CD/CI",
+        "Architecture Design",
+        "System/Network Admin"
       ],
       "description": "Full-stack development capabilities with strong focus on scientific computing and system design.",
       "projects": [
-        "Real-time data processing pipeline",
-        "Machine learning frameworks",
-        "Web-based visualization tools"
+        "Multiple Web applications visualisation tools",
+        "Custom python-based full software with UI for biophotonics labs",
+        "Monte Carlo light transport simulator"
       ]
     },
     {
@@ -50,20 +51,17 @@
       "icon": "⚙️",
       "color": "#8b5cf6",
       "skills": [
-        "Architecture Design",
-        "DevOps",
-        "Cloud Infrastructure",
-        "Kubernetes",
-        "AWS/Azure",
-        "Microservices",
-        "CI/CD Pipelines",
-        "Performance Optimization"
+        "Project Planning",
+        "Requirement Analysis",
+        "Technical Overview",
+        "Interface Definition and Control",
+        "Team Coordination"
       ],
       "description": "Designing and implementing scalable, reliable systems from concept to production deployment.",
       "projects": [
-        "Distributed computing cluster",
-        "Auto-scaling infrastructure",
-        "High-availability systems"
+        "System Engineer for Earth Observation Satellite Constellation",
+        "Payload Lead for Sounding Rocket Experiments",
+        "Electronics Lead for snow optical properties instrument design and concept"
       ]
     },
     {
@@ -74,7 +72,7 @@
       "skills": [
         "FDM 3D Printing",
         "PLA, PETG, ABS, ASA, Nylon, TPU, PPA, PPS",
-        "3D Design Software (Fusion 360, SolidWorks, FreeCAD)",
+        "3D Design Software",
         "Quick Iterative Prototyping",
         "Finite Element Analysis (FEA)",
         "3D Scanning and Reverse Engineering"
@@ -92,8 +90,6 @@
       "icon": "📊",
       "color": "#10b981",
       "skills": [
-        "Machine Learning",
-        "Statistical Modeling",
         "Data Visualization",
         "TensorFlow/PyTorch",
         "Big Data Processing",
@@ -103,9 +99,7 @@
       ],
       "description": "Advanced data analysis and machine learning for complex scientific and business problems.",
       "projects": [
-        "Predictive maintenance system",
-        "Anomaly detection framework",
-        "Real-time analytics dashboard"
+        ""
       ]
     },
     {
@@ -125,9 +119,8 @@
       ],
       "description": "Strategic technical consulting to help organizations solve complex challenges and optimize operations.",
       "projects": [
-        "Digital transformation roadmap",
-        "System integration strategy",
-        "Technology stack optimization"
+        "System Engineer for Earth Observation Satellite Constellation",
+        "Consulting for birch sap harvesting optimization"
       ]
     }
   ]
