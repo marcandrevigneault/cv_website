@@ -44,7 +44,7 @@ export default function Home() {
                 <div>
                   <div className="grid md:grid-cols-2 gap-4">
                     {content?.projects.map((project) => (
-                      <div key={project.id} className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/50 hover:border-gray-600/50 hover:from-gray-950/70 hover:to-gray-900/50 transition-all duration-300 group relative">
+                      <div key={project.id} className="bg-secondary/90 backdrop-blur-md rounded-lg p-4 border border-gray-500/40 hover:border-primary transition-all duration-300 group relative">
                         <div className="flex justify-between items-start mb-2">
                           <h4 className="font-semibold">{project.title}</h4>
                           {project.year && (
@@ -108,7 +108,7 @@ export default function Home() {
                 {content?.papers
                   .sort((a, b) => b.year - a.year)
                   .map((paper, index) => (
-                  <div key={index} className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/50 hover:border-gray-600/50 hover:from-gray-950/70 hover:to-gray-900/50 transition-all duration-300">
+                  <div key={index} className="bg-secondary/90 backdrop-blur-md rounded-lg p-4 border border-gray-500/40 hover:border-primary transition-all duration-300">
                     <div className="flex justify-between items-start gap-4 mb-2">
                       <h4 className="font-semibold text-lg">{paper.title}</h4>
                       <span className="text-sm text-primary font-medium whitespace-nowrap">{paper.year}</span>

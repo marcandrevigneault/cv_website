@@ -98,13 +98,12 @@ export default function SkillsSection() {
               onClick={() => handleCardClick(index)}
               className={`
                 relative overflow-hidden
-                bg-gradient-to-br from-gray-900/50 to-gray-800/30
-                backdrop-blur-sm rounded-xl p-4 cursor-pointer
-                border border-gray-700/50
+                bg-secondary/90 backdrop-blur-md rounded-xl p-4 cursor-pointer
+                border border-gray-500/40
                 transition-all duration-300
                 ${isExpanded
-                  ? 'shadow-2xl border-gray-600/50 bg-gradient-to-br from-gray-900/70 to-gray-800/50'
-                  : 'hover:shadow-lg hover:-translate-y-1 hover:border-gray-600/50'
+                  ? 'shadow-2xl border-primary'
+                  : 'hover:shadow-lg hover:-translate-y-1 hover:border-primary'
                 }
               `}
             >
@@ -120,14 +119,14 @@ export default function SkillsSection() {
                 <div className={`flex items-center justify-between ${isExpanded ? 'mb-4' : 'mb-0'}`}>
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">{category.icon}</span>
-                    <h3 className="font-semibold text-lg text-gray-100">
+                    <h3 className="font-semibold text-lg text-foreground">
                       {category.title}
                     </h3>
                   </div>
                   <motion.div
                     animate={{ rotate: isExpanded ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className="text-gray-400"
+                    className="text-muted"
                   >
                     <svg
                       width="20"
@@ -156,12 +155,12 @@ export default function SkillsSection() {
                       }}
                       className="space-y-4 overflow-hidden"
                     >
-                      <p className="text-gray-300 leading-relaxed text-sm">
+                      <p className="text-foreground leading-relaxed text-sm">
                         {category.description}
                       </p>
 
                       <div>
-                        <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">
+                        <h4 className="text-xs font-medium text-muted uppercase tracking-wider mb-2">
                           Technical Skills
                         </h4>
                         <div className="flex flex-wrap gap-1.5">
@@ -171,8 +170,8 @@ export default function SkillsSection() {
                               initial={{ opacity: 0, scale: 0.9 }}
                               animate={{ opacity: 1, scale: 1 }}
                               transition={{ duration: 0.2 }}
-                              className="px-2 py-1 bg-gray-800/50 text-gray-300 rounded text-xs
-                                       border border-gray-700/30"
+                              className="px-2 py-1 bg-skill-tag-bg text-foreground rounded text-xs
+                                       border border-skill-tag-border"
                             >
                               {skill}
                             </motion.span>
@@ -182,13 +181,13 @@ export default function SkillsSection() {
 
                       {category.projects && category.projects.length > 0 && (
                         <div>
-                          <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">
+                          <h4 className="text-xs font-medium text-muted uppercase tracking-wider mb-2">
                             Notable Projects
                           </h4>
                           <ul className="space-y-1">
                             {category.projects.map((project) => (
-                              <li key={project} className="text-gray-300 text-sm flex items-start">
-                                <span className="text-gray-500 mr-2">•</span>
+                              <li key={project} className="text-foreground text-sm flex items-start">
+                                <span className="text-muted mr-2">•</span>
                                 <span>{project}</span>
                               </li>
                             ))}
@@ -211,7 +210,7 @@ export default function SkillsSection() {
           animate={{ opacity: 1 }}
           className="text-center mt-4"
         >
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-muted">
             Click any card to collapse row
           </p>
         </motion.div>

@@ -38,7 +38,7 @@ export default function TariffCard() {
         return (
           <div
             key={service.key}
-            className="bg-secondary/90 backdrop-blur-sm rounded-lg p-6 hover:border hover:border-primary transition group relative"
+            className="bg-secondary/90 backdrop-blur-sm rounded-lg p-6 border-2 border-secondary hover:border-primary transition group relative"
           >
             <h3 className="text-xl font-semibold mb-2">{serviceData.title}</h3>
             <p className="text-3xl font-bold text-primary mb-4">{serviceData.rate}</p>

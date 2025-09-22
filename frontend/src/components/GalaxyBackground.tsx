@@ -36,7 +36,7 @@ export default function GalaxyBackground() {
   const options = useMemo(() => ({
     particles: {
       number: {
-        value: isMobile ? 100 : 250,
+        value: isMobile ? 200 : 500,
         density: { enable: true, value_area: 800 }
       },
       color: { value: ['#3b82f6', '#06b6d4', '#8b5cf6'] },
@@ -46,7 +46,7 @@ export default function GalaxyBackground() {
         animation: { enable: true, speed: 0.5, sync: false }
       },
       size: {
-        value: { min: 1, max: 3 },
+        value: { min: 1, max: 6 },
         animation: { enable: true, speed: 2, sync: false }
       },
       links: {
@@ -63,6 +63,10 @@ export default function GalaxyBackground() {
         random: true,
         straight: false,
         outModes: 'bounce' as const
+      },
+      position: {
+        x: { value: 25, spread: 25 },
+        y: { value: 25, spread: 20 }
       }
     },
     interactivity: {

@@ -3,6 +3,54 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Base colors */
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    --primary: #3b82f6;
+    --secondary: #f1f5f9;
+    --accent: #06b6d4;
+    --muted: #64748b;
+
+    /* Card specific */
+    --card-background: #f8fafc;
+    --card-border: #cbd5e1;
+    --card-hover-border: #64748b;
+
+    /* Skills section */
+    --skill-tag-bg: #e2e8f0;
+    --skill-tag-border: #cbd5e1;
+
+    /* Borders */
+    --border-light: #e2e8f0;
+    --border-medium: #cbd5e1;
+    --border-dark: #94a3b8;
+  }
+
+  .dark {
+    /* Base colors */
+    --background: #0a0a0a;
+    --foreground: #fafafa;
+    --primary: #3b82f6;
+    --secondary: #1e293b;
+    --accent: #06b6d4;
+    --muted: #475569;
+
+    /* Card specific */
+    --card-background: #1e293b;
+    --card-border: #374151;
+    --card-hover-border: #4b5563;
+
+    /* Skills section */
+    --skill-tag-bg: #374151;
+    --skill-tag-border: #4b5563;
+
+    /* Borders */
+    --border-light: #374151;
+    --border-medium: #4b5563;
+    --border-dark: #6b7280;
+  }
+
   html {
     @apply bg-background text-foreground;
   }
