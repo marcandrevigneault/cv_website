@@ -1,0 +1,53 @@
+{
+  "personal": {
+    "name": "Marc-André Vigneault",
+    "title": "Physics & Systems Engineering Consultant",
+    "tagline": "Systems Engineering, Programming & Physics",
+    "shortBio": "Freelance consultant specializing in physics, coding, and systems engineering",
+    "email": "marc-andre.vigneault@mvxconsulting.com",
+    "phone": "+1 (581) 978-4778",
+    "location": "Quebec City, Canada"
+  },
+  "social": {
+    "github": "https://github.com/marcandrevigneault",
+    "linkedin": "https://www.linkedin.com/in/marc-andr%C3%A9-vigneault/",
+    "twitter": "https://twitter.com/yourusername",
+    "website": "https://mvxconsulting.com"
+  },
+  "company": {
+    "name": "MVX Consulting",
+    "shortName": "MVX",
+    "domain": "mvxconsulting.com",
+    "founded": "2025"
+  },
+  "services": {
+    "hourly": {
+      "title": "Hourly Rate",
+      "rate": "$150/hr",
+      "description": "Advanced technical expertise on cross-disciplinary projects",
+      "features": ["Video calls", "Code review", "Problem solving", "Prototyping", "Technical documentation", "Research", "Cleanroom Manufacturing" ]
+    },
+    "project": {
+      "title": "Project Based",
+      "rate": "Custom quote",
+      "description": "Complete project lifecycle from initial concept through final deployment and handover",
+      "features": ["Project planning & timeline", "Full development cycle", "Testing & validation", "Documentation & training", "Post-deployment support", "Code ownership transfer"]
+    },
+    "retainer": {
+      "title": "Creative Partnership",
+      "rate": "Collaborative model",
+      "description": "Long-term collaborative partnerships for innovative projects with shared risk and rewards",
+      "features": ["Co-development opportunities", "Joint research initiatives", "Publication collaborations", "Revenue sharing models", "Equity participation", "Academic partnerships"]
+    }
+  },
+  "documents": {
+    "cv": "/documents/cv.pdf",
+    "certifications": "/documents/certifications.pdf",
+    "portfolio": "/documents/portfolio.pdf"
+  },
+  "seo": {
+    "title": "MVX Consulting - Physics & Systems Engineering",
+    "description": "Freelance consultant specializing in physics, coding, and systems engineering. Expert in quantum mechanics, machine learning, and system architecture.",
+    "keywords": ["physics consultant", "systems engineering", "machine learning", "freelance developer", "Optics", "Quebec", "Physicist", "Physics Engineering", "Canada", "Algorithms"]
+  }
+}

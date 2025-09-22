@@ -1,0 +1,66 @@
+{
+  "personal": {
+    "name": "Marc-André Vigneault",
+    "title": "System Engineering, Programming & Physics",
+    "email": "marc-andre.vigneault@mvxconsulting.com",
+    "github": "https://github.com/marcandrevigneault",
+    "linkedin": "https://www.linkedin.com/in/marc-andr%C3%A9-vigneault/"
+  },
+
+  "papers": [
+    {
+      "title": "Tools and tutorial on practical ray tracing for microscopy",
+      "journal": "Neurophotonics 8 (1), 010801",
+      "year": 2021,
+      "link": "https://www.spiedigitallibrary.org/journals/neurophotonics/volume-8/issue-1/010801/Tools-and-tutorial-on-practical-ray-tracing-for-microscopy/10.1117/1.NPh.8.1.010801.full"
+    },
+    {
+      "title": "Impact of shrub branches on the shortwave vertical irradiance profile in snow",
+      "journal": "The Cryosphere, 19, 1757–1774",
+      "year": 2025,
+      "link": "https://tc.copernicus.org/articles/19/1757/2025/tc-19-1757-2025.pdf"
+    },
+    {
+      "title": "PyTissueOptics: A hardware-accelerated Python module for 3D\nMonte Carlo simulation of light propagation in complex media (Future Release)",
+      "journal": "Journal Of Biomedical Optics, TBD",
+      "year": 2025,
+      "link": ""
+    },
+    {
+      "title": "Master Thesis: On building a Python-based Monte Carlo light simulation package for biophotonics with focus on complex 3-dimensional arbitrary geometries and hardware acceleration.",
+      "journal": "Université Laval, Department of Physics and Physics Engineering",
+      "year": 2022,
+      "link": "/documents/master_thesis_marcandrevigneault_27_08_2024.pdf"
+    }
+  ],
+  "projects": [
+    {"id": "proj0",
+      "title": "PyTissueOptics: 3D Monte Carlo Light Simulation",
+      "category": "Programming",
+      "description": "Developed a Python module for 3D Monte Carlo simulation of light propagation in complex media, leveraging GPU acceleration for enhanced performance.",
+      "technologies": ["Python", "CUDA", "C++", "Scientific Computing"],
+      "year": 2022,
+      "link": "https://github.com/DCC-Lab/PyTissueOptics"},
+
+    {
+      "id": "proj1",
+      "title": "Sounding Rocket Payload Design - Strain Detection",
+      "category": "System Engineering",
+      "description": "Payload lead for high-altitude atmospheric research using custom design fiber-bragg grating frequency sweep strain detection of rocket metal fins.",
+      "technologies": ["ECAD", "Signal Processing", "Fiber Optics"],
+      "year": 2019,
+      "link": "https://gaulspace.web.app/home",
+      "documentLink": "/documents/FBG_grating_sweep_strain_sensor_Vigneault_Mercier.pdf"
+    },
+
+    {
+      "id": "proj2",
+      "title": "Sounding Rocket Payload Design - Rotation Sensing",
+      "category": "System Engineering",
+      "description": "Payload lead for a fibered sagnac interferometer for high precision rotation sensing in a sounding rocket environment.",
+      "technologies": ["ECAD", "Signal Processing", "Fiber Optics"],
+      "year": 2018,
+      "link": "https://gaulspace.web.app/home"
+    }
+  ]
+}
