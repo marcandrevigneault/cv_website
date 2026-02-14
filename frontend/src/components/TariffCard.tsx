@@ -24,7 +24,7 @@ export default function TariffCard() {
   ]
 
   const handleEmailClick = (service: typeof serviceMap[0]) => {
-    const email = config?.personal.email || 'marc-andre.vigneault@mvxconsulting.com'
+    const email = config?.personal.email || 'marc-andre.vigneault@mvxtechnologies.com'
     const mailto = `mailto:${email}?subject=${encodeURIComponent(service.emailSubject)}&body=${encodeURIComponent(service.emailBody)}`
     window.open(mailto, '_self')
   }

@@ -4,7 +4,7 @@
     "title": "Physics & Systems Engineering Consultant",
     "tagline": "Systems Engineering, Programming & Physics",
     "shortBio": "Freelance consultant specializing in physics, coding, and systems engineering",
-    "email": "marc-andre.vigneault@mvxconsulting.com",
+    "email": "marc-andre.vigneault@mvxtechnologies.com",
     "phone": "+1 (581) 978-4778",
     "location": "Quebec City, Canada"
   },
@@ -12,12 +12,12 @@
     "github": "https://github.com/marcandrevigneault",
     "linkedin": "https://www.linkedin.com/in/marc-andr%C3%A9-vigneault/",
     "twitter": "https://twitter.com/yourusername",
-    "website": "https://mvxconsulting.com"
+    "website": "https://mvxtechnologies.com"
   },
   "company": {
-    "name": "MVX Consulting",
+    "name": "MVX Technologies",
     "shortName": "MVX",
-    "domain": "mvxconsulting.com",
+    "domain": "mvxtechnologies.com",
     "founded": "2025"
   },
   "services": {
@@ -46,7 +46,7 @@
     "portfolio": "/documents/portfolio.pdf"
   },
   "seo": {
-    "title": "MVX Consulting - Physics & Systems Engineering",
+    "title": "MVX Technologies - Physics & Systems Engineering",
     "description": "Freelance consultant specializing in physics, coding, and systems engineering. Expert in quantum mechanics, machine learning, and system architecture.",
     "keywords": ["physics consultant", "systems engineering", "machine learning", "freelance developer", "Optics", "Quebec", "Physicist", "Physics Engineering", "Canada", "Algorithms"]
   }
