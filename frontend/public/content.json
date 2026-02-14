@@ -34,14 +34,24 @@
     }
   ],
   "projects": [
-    {"id": "proj0",
+    {
+      "id": "proj3",
+      "title": "Earth Daily Analytics - Observation Satellite Constellation",
+      "category": "System Engineering",
+      "description": "Employed by ABB as a Space and Defense R&D Systems Engineer. Core team member on the EDOSS project. Primarily worked on the conception, technical management and testing of high-resolution, highly-complex flight integrated systems for a Earth Observation Satellite Constellation.",
+      "technologies": ["Python", "Optics", "Algorithms", "System Engineering"],
+      "year": 2025,
+      "link": "https://earthdaily.com/blog/earthdaily-analytics-to-launch-its-first-satellite"
+    },
+    {
+      "id": "proj0",
       "title": "PyTissueOptics: 3D Monte Carlo Light Simulation",
       "category": "Programming",
       "description": "Developed a Python module for 3D Monte Carlo simulation of light propagation in complex media, leveraging GPU acceleration for enhanced performance.",
       "technologies": ["Python", "CUDA", "C++", "Scientific Computing"],
       "year": 2022,
-      "link": "https://github.com/DCC-Lab/PyTissueOptics"},
-
+      "link": "https://github.com/DCC-Lab/PyTissueOptics"
+    },
     {
       "id": "proj1",
       "title": "Sounding Rocket Payload Design - Strain Detection",
@@ -52,7 +62,6 @@
       "link": "https://gaulspace.web.app/home",
       "documentLink": "/documents/FBG_grating_sweep_strain_sensor_Vigneault_Mercier.pdf"
     },
-
     {
       "id": "proj2",
       "title": "Sounding Rocket Payload Design - Rotation Sensing",
@@ -61,15 +70,6 @@
       "technologies": ["ECAD", "Signal Processing", "Fiber Optics"],
       "year": 2018,
       "link": "https://gaulspace.web.app/home"
-    },
-    {
-      "id": "proj3",
-      "title": "Earth Daily Analytics - Observation Satellite Constellation",
-      "category": "System Engineering",
-      "description": "Employed by ABB as a Space and Defense R&D Systems Engineer. Core team member on the EDOSS project. Primarily worked on the conception, technical management and testing of high-resolution, highly-complex flight integrated systems for a Earth Observation Satellite Constellation.",
-      "technologies": ["Python", "Optics", "Algorithms", "System Engineering"],
-      "year": 2025,
-      "link": "https://earthdaily.com/blog/earthdaily-analytics-to-launch-its-first-satellite"
     }
   ]
 }
