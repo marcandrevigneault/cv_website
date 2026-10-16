@@ -67,6 +67,7 @@ export const work: WorkItem[] = [
 export interface TeamMember {
   id: string
   initials: string
+  photo?: string
   name: string
   role: string
   summary: string
@@ -79,6 +80,7 @@ export const team: TeamMember[] = [
   {
     id: 'mav',
     initials: 'MV',
+    photo: '/team/marc-andre.jpg',
     name: 'Marc-André Vigneault',
     role: 'Lead engineer and administrator',
     summary:
@@ -92,6 +94,12 @@ export const team: TeamMember[] = [
       { title: 'Integration and test', skills: 'Verification planning, flight-system testing, technical management' },
     ],
     experience: [
+      {
+        when: '2025–now',
+        title: 'Technical team lead, MVX Technologies Inc.',
+        description:
+          'Founded the firm in Quebec City. Leads the technical work on client contracts from scoping and architecture through delivery, and builds the company products Inukshuk and Trivial Tuner.',
+      },
       {
         when: '2026',
         title: 'Contract engineer, satellite imagery and thermal calibration',

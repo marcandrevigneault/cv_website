@@ -19,7 +19,12 @@ export default function Team({ members }: { members: TeamMember[] }) {
         {members.map((m) => (
           <li key={m.id}>
             <button type="button" className="person" aria-haspopup="dialog" onClick={() => show(m)}>
-              <span className="avatar" aria-hidden="true">{m.initials}</span>
+              {m.photo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img className="avatar" src={m.photo} alt="" width={56} height={56} />
+              ) : (
+                <span className="avatar" aria-hidden="true">{m.initials}</span>
+              )}
               <span>
                 <b>{m.name}</b>
                 <span className="role">{m.role}</span>
@@ -40,7 +45,12 @@ export default function Team({ members }: { members: TeamMember[] }) {
         {open && (
           <div className="cv-in">
             <div className="cv-head">
-              <span className="avatar" aria-hidden="true">{open.initials}</span>
+              {open.photo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img className="avatar" src={open.photo} alt="" width={56} height={56} />
+              ) : (
+                <span className="avatar" aria-hidden="true">{open.initials}</span>
+              )}
               <div>
                 <h2 id="cv-name">{open.name}</h2>
                 <p>{open.role}, {company.name}</p>
