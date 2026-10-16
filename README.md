@@ -1,67 +1,35 @@
-# MVX Portfolio Website
+# MVX Technologies Inc. website
 
-Minimalist CV website with separate frontend/backend architecture.
+Source for [mvxtechnologies.com](https://mvxtechnologies.com): a single-page Next.js site exported as
+static files and deployed to GitHub Pages on every push to `main`.
 
-## Architecture
+## Editing content
+
+All copy lives in `frontend/src/content/site.ts`: company blurb, selected work, team members and their
+CV pop-up, services, products and publications. Product icons are in `frontend/public/products/`, PDFs in
+`frontend/public/documents/`.
+
+## Structure
 
 ```
-mvx-portfolio/
-├── frontend/           # Next.js React app
-│   ├── src/
-│   │   ├── app/       # Pages
-│   │   └── components/# UI components
-│   └── public/        # Static files
-│
-└── backend/           # Express API server
-    ├── src/
-    │   ├── routes/    # API endpoints
-    │   └── server.ts  # Main server
-    └── data/          # JSON content
+frontend/src/
+  app/            layout, page, global styles
+  components/     DoubleSlit (hero simulator), Team (cards + CV dialog), WaveFx (dividers + ripples)
+  lib/
+    wave.ts       shared wavelength state, spectrum colours
+    doubleSlit.ts 2D double-slit simulation drawn on a canvas
+    waveFx.ts     wave dividers and the click-ripple wave equation (walls = page glyphs)
+  content/        site.ts — all text
 ```
 
-## Quick Start
+The hero simulator's wavelength drives the colour and period of the section dividers and of the
+click ripples. Everything animated is disabled for visitors who prefer reduced motion.
+
+## Development
 
 ```bash
-# Frontend (port 3000)
 cd frontend
 npm install
-npm run dev
-
-# Backend (port 5000)
-cd backend
-npm install
-npm run dev
-
-# Docker (both services)
-docker-compose up -d
+npm run dev      # http://localhost:3000
+npm run build    # static export to frontend/out
 ```
-
-## Features
-
-### Animated Backgrounds
-Click the 🎨 button to test 6 different animated backgrounds:
-- Particles
-- Waves
-- Matrix
-- Geometric
-- Gradient
-- Stars
-
-### API Endpoints
-- `GET /api/content` - Fetch site content
-- `POST /api/content` - Update content
-- `GET /api/stats/world-stats` - Statistical data
-- `GET /api/stats/random-fact` - Random facts
-
-### Content Management
-Edit `backend/data/content.json` to update site content.
-
-### Documents
-Place PDFs in `frontend/public/documents/`
-
-## Docker Deployment
-```bash
-docker-compose up -d
-```
-- Frontend: http://localhost:3000
-- Backend: http://localhost:5000

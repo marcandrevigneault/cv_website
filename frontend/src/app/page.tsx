@@ -1,159 +1,139 @@
-'use client'
+import DoubleSlit from '@/components/DoubleSlit'
+import Team from '@/components/Team'
+import WaveFx from '@/components/WaveFx'
+import { company, products, publications, services, team, work } from '@/content/site'
 
-import Navigation from '@/components/Navigation'
-import SkillsSection from '@/components/SkillsSection'
-import TariffCard from '@/components/TariffCard'
-import ContactInfo from '@/components/ContactInfo'
-import { useConfig } from '@/hooks/useConfig'
-import { useContent } from '@/hooks/useContent'
+const Divider = () => <canvas className="wdiv" aria-hidden="true" />
 
 export default function Home() {
-  const { config } = useConfig()
-  const { content, loading } = useContent()
-
   return (
-    <main className="min-h-screen">
-      <Navigation />
-      <div className="container mx-auto px-4 py-16 max-w-6xl relative">
-
-        <section className="mb-16">
-          <h1 className="text-5xl font-bold mb-4">{config?.personal.name || 'Loading...'}</h1>
-          <p className="text-xl text-muted">{config?.personal.tagline || '...'}</p>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-8">Skills</h2>
-          <SkillsSection />
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-8">Services & Tariffs</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <TariffCard />
+    <>
+      <WaveFx />
+      <div id="site">
+        <header className="site-nav">
+          <div className="wrap">
+            <a className="logo" href="#top">{company.name}</a>
+            <nav aria-label="Main">
+              <a href="#work">Work</a>
+              <a href="#team">Team</a>
+              <a href="#services">Services</a>
+              <a href="#products">Products</a>
+              <a href="#publications">Publications</a>
+            </nav>
           </div>
-        </section>
+        </header>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-8">Notable Projects</h2>
-          <div className="space-y-6">
-            {loading ? (
-              <p className="text-muted">Loading...</p>
-            ) : (
-              <>
-                {/* Projects */}
-                <div>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {content?.projects.map((project) => (
-                      <div key={project.id} className="bg-secondary/90 backdrop-blur-md rounded-lg p-4 border border-gray-500/40 hover:border-primary transition-all duration-300 group relative">
-                        <div className="flex justify-between items-start mb-2">
-                          <h4 className="font-semibold">{project.title}</h4>
-                          {project.year && (
-                            <span className="text-xs text-primary font-medium">{project.year}</span>
-                          )}
-                        </div>
-                        <p className="text-sm text-muted mb-3">{project.description}</p>
-                        <div className="flex flex-wrap gap-1 mb-2">
-                          {project.technologies.map((tech) => (
-                            <span key={tech} className="text-xs bg-primary/20 text-primary px-2 py-1 rounded">
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                        <span className="text-xs text-accent">{project.category}</span>
+        <main>
+          <section className="hero" id="top">
+            <div className="wrap">
+              <h1>{company.name}</h1>
+              <p className="lede">{company.lede}</p>
+              <p className="where">{company.where}</p>
+              <a className="cta" href="#contact">Discuss a project</a>
+              <DoubleSlit />
+            </div>
+          </section>
 
-                        {/* Icons Container */}
-                        <div className="absolute bottom-4 right-4 flex gap-2">
-                          {/* External Link Icon - always visible if link exists and is not "#" */}
-                          {project.link && project.link !== "#" && (
-                            <button
-                              onClick={() => window.open(project.link.startsWith('http') ? project.link : `https://${project.link}`, '_blank')}
-                              className="w-8 h-8 bg-primary/20 hover:bg-primary/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                              title={`View ${project.title}`}
-                            >
-                              <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                              </svg>
-                            </button>
-                          )}
-
-                          {/* Document Link Icon - always visible if documentLink exists */}
-                          {project.documentLink && (
-                            <button
-                              onClick={() => window.open(project.documentLink, '_blank')}
-                              className="w-8 h-8 bg-accent/20 hover:bg-accent/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                              title={`View ${project.title} Document`}
-                            >
-                              <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                              </svg>
-                            </button>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-8">Papers & Contributions</h2>
-          <div className="space-y-4">
-            {loading ? (
-              <p className="text-muted">Loading...</p>
-            ) : (
-              <div className="grid gap-4">
-                {content?.papers
-                  .sort((a, b) => b.year - a.year)
-                  .map((paper, index) => (
-                  <div key={index} className="bg-secondary/90 backdrop-blur-md rounded-lg p-4 border border-gray-500/40 hover:border-primary transition-all duration-300">
-                    <div className="flex justify-between items-start gap-4 mb-2">
-                      <h4 className="font-semibold text-lg">{paper.title}</h4>
-                      <span className="text-sm text-primary font-medium whitespace-nowrap">{paper.year}</span>
+          <section className="sec" id="work">
+            <Divider />
+            <div className="wrap">
+              <h2>Selected work</h2>
+              <ul className="work-list">
+                {work.map((w) => (
+                  <li key={w.title}>
+                    <span className="yr">{w.year}</span>
+                    <div>
+                      <h3>{w.link ? <a href={w.link} target="_blank" rel="noopener noreferrer">{w.title}</a> : w.title}</h3>
+                      <p className="cat">{w.category}</p>
+                      <p className="desc">{w.description}</p>
+                      <p className="tags">{w.tags.join(' / ')}</p>
                     </div>
-                    <p className="text-sm text-accent mb-3">{paper.journal}</p>
-                    {paper.link && (
-                      <a
-                        href={paper.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm text-primary hover:underline"
-                      >
-                        Read Paper
-                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    )}
-                  </div>
+                  </li>
                 ))}
-              </div>
-            )}
-          </div>
-        </section>
+              </ul>
+            </div>
+          </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-8">Documents</h2>
-          <div className="flex gap-4 flex-wrap">
-            <a
-              href={config?.documents.cv || '/documents/cv_marcandrevigneault_2025.pdf'}
-              className="px-6 py-3 bg-secondary rounded-lg hover:bg-primary transition"
-            >
-              Download CV
-            </a>
-            <a
-              href={config?.documents.certifications || '/documents/certifications.pdf'}
-              className="px-6 py-3 bg-secondary rounded-lg hover:bg-primary transition"
-            >
-              Certifications
-            </a>
-          </div>
-        </section>
+          <section className="sec" id="team">
+            <Divider />
+            <div className="wrap">
+              <h2>Team</h2>
+              <Team members={team} />
+            </div>
+          </section>
 
-        <ContactInfo />
+          <section className="sec" id="services">
+            <Divider />
+            <div className="wrap">
+              <h2>Ways to work with us</h2>
+              <ul className="svc-list">
+                {services.map((s) => (
+                  <li key={s.title}>
+                    <h3>{s.title}</h3>
+                    <p className="rate">{s.rate}</p>
+                    <p className="sd">{s.description}</p>
+                    <p className="feat">{s.features}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          <section className="sec" id="products">
+            <Divider />
+            <div className="wrap">
+              <h2>Products</h2>
+              <ul className="prod-list">
+                {products.map((p) => (
+                  <li key={p.name} className="product">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={p.icon} alt="" width={64} height={64} />
+                    <div>
+                      <h3>{p.name}</h3>
+                      <p className="pd">{p.description}</p>
+                      <p className="ps">
+                        {p.appStore && <a href={p.appStore} target="_blank" rel="noopener noreferrer">App Store</a>}
+                        {p.googlePlay && <a href={p.googlePlay} target="_blank" rel="noopener noreferrer">Google Play</a>}
+                        {p.website && <a href={p.website} target="_blank" rel="noopener noreferrer">Website</a>}
+                        {p.status && <span>{p.status}</span>}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          <section className="sec" id="publications">
+            <Divider />
+            <div className="wrap">
+              <h2>Publications</h2>
+              <ul className="pub-list">
+                {publications.map((p) => (
+                  <li key={p.title}>
+                    <span className="yr">{p.year}</span>
+                    <div>
+                      <p className="t">{p.link ? <a href={p.link} target="_blank" rel="noopener noreferrer">{p.title}</a> : p.title}</p>
+                      <p className="j">{p.venue}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        </main>
+
+        <footer className="contact" id="contact">
+          <div className="wrap">
+            <h2>Have a hard physics problem?</h2>
+            <a className="mail" href={`mailto:${company.email}`}>{company.email}</a>
+            <div className="links">
+              <a href={company.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href={company.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </div>
+        </footer>
       </div>
-    </main>
+    </>
   )
 }

@@ -1,32 +1,35 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Schibsted_Grotesk } from 'next/font/google'
 import './globals.css'
-import GalaxyBackground from '@/components/GalaxyBackground'
 
-const inter = Inter({ subsets: ['latin'] })
+const schibsted = Schibsted_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '700', '900'],
+  variable: '--font-sans',
+})
 
 export const metadata: Metadata = {
-  title: 'MVX Consulting - Physics & Systems Engineering',
-  description: 'Freelance consultant specializing in physics, coding, and systems engineering',
+  title: 'MVX Technologies Inc.',
+  description:
+    'Systems engineering across the full physics spectrum, from simulation software to flight hardware. Engineering firm based in Quebec City.',
+  metadataBase: new URL('https://mvxtechnologies.com'),
+  openGraph: {
+    title: 'MVX Technologies Inc.',
+    description: 'Systems engineering across the full physics spectrum, from simulation software to flight hardware.',
+    url: 'https://mvxtechnologies.com',
+    siteName: 'MVX Technologies Inc.',
+    type: 'website',
+  },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export const viewport: Viewport = {
+  themeColor: '#f3f3f1',
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
-      <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/favicon.ico" />
-      </head>
-      <body className={inter.className}>
-        <GalaxyBackground />
-        <div className="relative z-10">
-          {children}
-        </div>
-      </body>
+    <html lang="en" className={schibsted.variable}>
+      <body>{children}</body>
     </html>
   )
 }
