@@ -77,7 +77,6 @@ export default function DoubleSlit() {
         />
         <output htmlFor="slit-spacing">{slitUm.toFixed(2)} µm</output>
         <p className="slit-band">{bandLabel(nm)}</p>
-        <p className="slit-hint">Click anywhere on the page, even between letters, to send a wave.</p>
       </div>
     </figure>
   )

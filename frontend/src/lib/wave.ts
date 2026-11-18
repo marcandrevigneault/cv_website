@@ -1,4 +1,4 @@
-// Shared state between the double-slit simulator and the page effects (dividers, ripples).
+// Shared state between the double-slit simulator and the page effects (dividers).
 // The simulator writes it; the effects read it every frame.
 
 export type RGB = [number, number, number]
@@ -31,7 +31,7 @@ export function bandLabel(nm: number): string {
   return 'Visible light, shown in its own colour'
 }
 
-/** On-page wave period in px for decorative waves (dividers, ripple rings). */
+/** On-page wave period in px for decorative waves (dividers). */
 export function pagePeriodPx(nm: number): number {
   return Math.max(14, Math.min(140, 38 * Math.pow(nm / 532, 0.6)))
 }
