@@ -122,7 +122,7 @@ export const team: TeamMember[] = [
         when: '2022',
         title: 'M.Sc. Physics, Université Laval',
         description:
-          'Thesis on PyTissueOptics: 3D Monte Carlo light simulation for biophotonics with arbitrary geometries and hardware acceleration. Also worked on CARS (coherent anti-Stokes Raman scattering) and two-photon imaging systems, and developed light-sheet microscopy to scan whole animal-model brains down to single-neuron resolution.',
+          'Thesis on PyTissueOptics: 3D Monte Carlo light simulation for biophotonics with arbitrary geometries and hardware acceleration. Also worked on CARS (coherent anti-Stokes Raman scattering) and two-photon imaging systems, and helped develop the axicon imaging system for a light-sheet microscopy project.',
       },
       {
         when: '2018–2019',
