@@ -89,7 +89,7 @@ export const team: TeamMember[] = [
       { title: 'Simulation', skills: 'Monte Carlo light transport, ray tracing, computational physics' },
       { title: 'Software', skills: 'Python, C++, CUDA, TypeScript, CI/CD, system architecture' },
       { title: 'Electronics', skills: 'ECAD, signal processing, instrument electronics' },
-      { title: 'Optics', skills: 'Photonics, spectroscopy, fibre sensors, interferometry' },
+      { title: 'Optics', skills: 'Photonics, spectroscopy, nonlinear and light-sheet microscopy, fibre sensors, interferometry' },
       { title: 'Mechanics', skills: '3D design, FEA, rapid prototyping, additive manufacturing' },
       { title: 'Integration and test', skills: 'Verification planning, flight-system testing, technical management' },
     ],
@@ -122,7 +122,7 @@ export const team: TeamMember[] = [
         when: '2022',
         title: 'M.Sc. Physics, Université Laval',
         description:
-          'Thesis on PyTissueOptics: 3D Monte Carlo light simulation for biophotonics with arbitrary geometries and hardware acceleration.',
+          'Thesis on PyTissueOptics: 3D Monte Carlo light simulation for biophotonics with arbitrary geometries and hardware acceleration. Also worked on CARS (coherent anti-Stokes Raman scattering) and two-photon imaging systems, and developed light-sheet microscopy to scan whole animal-model brains down to single-neuron resolution.',
       },
       {
         when: '2018–2019',
